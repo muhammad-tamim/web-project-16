@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube</title>
-    <link rel="shortcut icon" href="assets/images/youtube-logo.png" type="image/x-icon">
+    <title>PHTube</title>
+    <link rel="shortcut icon" href="assets/images/fab-icon.png" type="image/x-icon">
 
     <!-- DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -28,10 +28,32 @@
     }
   </style>
 
+    <!-- Customize DaisyUI colors -->
+    <style>
+        :root {
+            --color-primary: #FF1F3D;
+            --color-primary-content: #171717;
+        }
+    </style>
+
 </head>
 
-<body class="font-inter">
-    <header></header>
+<body class="font-inter max-w-[1920px] mx-auto px-3 md:px-5 lg:px-10">
+    <header>
+        <nav class="flex justify-between items-center gap-6 pt-5 lg:pt-8">
+            <div><img src="assets/images/Logo.png" alt="logo"></div>
+            <div>
+                <label class="input input-xs md:input-sm lg:input-md xl:input-lg rounded-full">
+                    <input type="search" required placeholder="Search" />
+                    <i class="fa-solid fa-magnifying-glass text-primary"></i>
+                </label>
+            </div>
+            <div><button class="btn btn-xs md:btn-sm lg:btn-md btn-primary btn-outline">SignIn</button></div>
+        </nav>
+    </header>
+
+    <hr class="text-primary-content/20 my-4 md:my-6 lg:my-8">
+
     <main></main>
     <footer></footer>
 </body>
