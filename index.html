@@ -59,15 +59,10 @@
 
     <main>
         <!-- Category button section -->
-        <section class="flex flex-wrap  justify-center gap-6">
-            <button
-                class="font-medium text-primary-content/70 py-2 px-5 rounded-[4px] bg-[#252525]/15 cursor-pointer hover:bg-primary hover:text-white hover:font-semibold">All</button>
-            <button
-                class="font-medium text-primary-content/70 py-2 px-5 rounded-[4px] bg-[#252525]/15 cursor-pointer hover:bg-primary hover:text-white hover:font-semibold">Music</button>
-            <button
-                class="font-medium text-primary-content/70 py-2 px-5 rounded-[4px] bg-[#252525]/15 cursor-pointer hover:bg-primary hover:text-white hover:font-semibold">Comedy</button>
-            <button
-                class="font-medium text-primary-content/70 py-2 px-5 rounded-[4px] bg-[#252525]/15 cursor-pointer hover:bg-primary hover:text-white hover:font-semibold">Drawing</button>
+        <section id="buttons-container" class="flex flex-wrap  justify-center gap-6">
+            <button id="1000" class="font-medium text-primary-content/70 py-2 px-5 rounded-[4px] bg-[#252525]/15 cursor-pointer hover:bg-primary 
+            hover:text-white hover:font-semibold">All</button>
+            <!-- Dynamic buttons comes here form js -->
         </section>
 
         <!-- Category content section -->
@@ -290,6 +285,9 @@
             <h1 class="font-bold text-3xl">Oops!! Sorry, There is no content here</h1>
         </div>
     </main>
+
+    <script src="utilities/utilities.js"></script>
+    <script src="scripts/loadCategoryButtons.js"></script>
 </body>
 
 </html>
