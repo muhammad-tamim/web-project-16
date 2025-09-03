@@ -53,6 +53,15 @@ function formatDate(value) {
   - If it didn’t match the above cases, just assume it’s already in milliseconds.
 
 ## Challenges I faced while Building This Project:
+1. I mistakenly add double quotes inside double quotes in a onclick function:
+
+``` <div onclick="showVideoCategoryDetailsById("${data.video_id}")" class="card cursor-pointer">```
+
+so, it's takes some time to find the error and resolve it with single quotes:  
+ 
+```index.html:1 Uncaught SyntaxError: Unexpected end of input (at index.html:1:30)            index.html:1```
+```<div onclick="showVideoCategoryDetailsById('${data.video_id}')" class="card cursor-pointer">```
+
 
 ## Contact With Me: 
 
