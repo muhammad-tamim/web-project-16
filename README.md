@@ -10,7 +10,7 @@
 
 1. how to Convert different date formats into a readable date
 ```js
-function formatPostedDate(value) {
+function formatDate(value) {
     if (!value) return "";
 
     const num = Number(value);
