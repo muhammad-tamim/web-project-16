@@ -15,32 +15,36 @@ function loadAllData(allData) {
         const container = document.getElementById("category-card-container");
 
         for (data of allData) {
-            console.log(data)
 
             const div = document.createElement("div");
             div.classList.add("card");
             div.innerHTML = `
-                <figure>
-                    <img class="rounded-lg w-[312px]"
+                <figure class="relative">
+                    <img class="rounded-lg w-[312px] h-[200px] "
                         src="${data.thumbnail}" alt="Shoes" />
+                        <span class="absolute text-xs right-10 bottom-3 rounded-md bg-primary-content py-1 px-[5px] text-white">
+                        ${formatDate(data.others.posted_date)}
+                        </span>
                 </figure>
                 <div class="card-body">
                     <div class="flex gap-3">
                         <div class="avatar">
                             <div class="rounded-full size-10">
-                                <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+                                <img src="${data.authors[0].profile_picture}" />
                             </div>
                         </div>
-                        <div class="space-y-2">
-                            <h3 class="font-bold text-base text-primary-content">Building a Winning UX Strategy Usin g
-                                the
-                                Kano
-                                Model</h3>
-                            <p class="flex items-center gap-2 text-sm text-primary-content/70">Awlad
-                                Hossain<span><img class="size-5" src="assets/images/icons8-verified-48.png"
-                                        alt=""></span></p>
-                            <p class="text-sm text-primary-content/70"><span>91K</span> Views</p>
-                        </div>
+                   <div class="space-y-2">
+  <h3 class="font-bold text-base text-primary-content">${data.title}</h3>
+  <p class="flex items-center gap-2 text-sm text-primary-content/70">
+    ${data.authors[0].profile_name}
+    ${data.authors[0].verified
+                    ? `<img class="size-5" src="assets/images/icons8-verified-48.png" alt="Verified">`
+                    : ""
+                }
+  </p>
+  <p class="text-sm text-primary-content/70"><span>${data.others.views}</span> Views</p>
+</div>
+
                     </div>
                 </div>
         `
