@@ -53,3 +53,12 @@ function displayCategoryVideoById(id) {
         })
 
 }
+// script.js
+function showVideoCategoryDetailsById(videoId) {
+    const url = `https://openapi.programming-hero.com/api/phero-tube/video/${videoId}`
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            showVideoModal(data.video)
+        })
+}
