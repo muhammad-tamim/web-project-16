@@ -38,7 +38,9 @@ function displayAllVideoDataThroughCards(allVideoData) {
     showOrHideErrorMessage("show")
 
     document.getElementById("display-all-video-btn").addEventListener("click", () => {
+        removeActiveClass()
         showVideoOnCards(allVideoData)
+        document.getElementById("display-all-video-btn").classList.add("active")
         showOrHideErrorMessage("hide")
     })
 }
@@ -49,6 +51,9 @@ function displayCategoryVideoById(id) {
     fetch(url)
         .then(res => res.json())
         .then(data => {
+            removeActiveClass()
+            const clickedBtn = document.getElementById(id)
+            clickedBtn.classList.add("active")
             showVideoOnCards(data.category)
         })
 
