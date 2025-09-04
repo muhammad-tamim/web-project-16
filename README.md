@@ -62,6 +62,59 @@ so, it's takes some time to find the error and resolve it with single quotes:
 ```index.html:1 Uncaught SyntaxError: Unexpected end of input (at index.html:1:30)            index.html:1```
 ```<div onclick="showVideoCategoryDetailsById('${data.video_id}')" class="card cursor-pointer">```
 
+2. i want to use our previously used function to implement search functionality, but it's not worked because of of loadALlVideoData function only worked when i click the all button: 
+
+```js
+function loadAllVideoData(search = "") {
+    fetch(`https://openapi.programming-hero.com/api/phero-tube/videos`)
+        .then(res => res.json())
+        .then(data => {
+            displayAllVideoDataThroughCards(data.videos)
+        })
+}
+loadAllVideoData();
+
+function displayAllVideoDataThroughCards(allVideoData) {
+
+    showOrHideErrorMessage("show")
+
+    document.getElementById("display-all-video-btn").addEventListener("click", () => {
+        removeActiveClass()
+        showVideoOnCards(allVideoData)
+        document.getElementById("display-all-video-btn").classList.add("active")
+        showOrHideErrorMessage("hide")
+    })
+}
+
+
+document.getElementById("search").addEventListener("keyup", (e) => {
+    const input = e.target.value;
+    loadAllVideoData(input);
+
+});
+```
+
+so i write a another new function do implement search functionality: 
+
+```js
+function showSearchVideo(search = "") {
+    const url = `https://openapi.programming-hero.com/api/phero-tube/videos?title=${search}`
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            showOrHideErrorMessage("show")
+            showVideoOnCards(data.videos)
+            showOrHideErrorMessage("hide")
+        })
+}
+
+
+document.getElementById("search").addEventListener("keyup", (e) => {
+    const input = e.target.value;
+    showSearchVideo(input);
+
+});
+```
 
 ## Contact With Me: 
 
