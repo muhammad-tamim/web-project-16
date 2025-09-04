@@ -7,6 +7,7 @@ PHTube is a responsive, web-based video streaming application where i can browse
 https://web-projects-16.netlify.app/
 
 ## Project Video:
+https://github.com/user-attachments/assets/ff8b1bbc-855f-4159-92e6-0c2a7eec893c
 
 ## Features:
 - I can search videos
