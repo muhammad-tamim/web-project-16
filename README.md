@@ -1,10 +1,17 @@
-# Project Name: 
+# Project Name: PhTube
 
-## Project Description:
+## Project Description:  
+PHTube is a responsive, web-based video streaming application where i can browse, search, and watch videos across various categories such as Music, Comedy, and Drawing. I build this project to practice on REST APIs, dynamic DOM manipulation, event handling etc.
 
 ## Live Site Link:
+https://web-projects-16.netlify.app/
 
 ## Project Video:
+
+## Features:
+- I can search videos
+- I can see video based on category when click category buttons like (all, Music etc).
+- I can see author details modal when click on the video card 
 
 ## What I Learned New while Building This Project:
 
